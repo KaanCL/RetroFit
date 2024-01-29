@@ -4,6 +4,8 @@ import com.example.retrofit.model.CryptoModel;
 
 import java.util.List;
 
+import io.reactivex.Observable;
+import io.reactivex.Observer;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
@@ -21,7 +23,8 @@ public interface CryptoAPI {
     // KaanCL/CryptoAPI/main/crypto.json
 
     @GET("atilsamancioglu/K21-JSONDataSet/master/crypto.json")
-    Call<List<CryptoModel>> getData();
+    Observable<List<CryptoModel>> getData();
+
 
 
     
